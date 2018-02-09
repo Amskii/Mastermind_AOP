@@ -1,0 +1,19 @@
+import java.util.Random;
+public class Mastermind {
+
+}
+
+
+enum Vari {
+  VIHREA, ORANSSI, SININEN, RUSKEA, VALKOINEN, KELTAINEN, MUSTA, PUNAINEN
+ }
+
+class Nappi {
+  Vari vari;
+  boolean tarkastettu = false; // merkitään true kun on tarkastettu
+  int sijainti; // 0,1,2,3
+}
+
+// Kun ratkaisua verrataan arvaukseen, ensin katsotaan ovatko ne täysin samat. 
+// Tämän jälkeen katsotaan onko sijainti oikein, ja viimeisenä onko väri oikein mutta sijainti väärin.
+// Kellonajan mittaus: katsotaan mitä kello on alussa, ja mitä se on lopussa
